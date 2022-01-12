@@ -47,8 +47,12 @@ export interface IHeroInfo extends IInfo {
 
 // 技能
 export interface ISkillInfo extends IInfo, IValuableItem {
-  groupInfoId: string; // 所属的阵营
-  buffInfoIds: string[]; // 可产生的状态
+  groupId: string; // 所属的阵营
+  tagIds: string[]; // 技能的标签，可产生状态
+  power: number; // 技能的威力，如果是伤害型就是伤害值
+  chant: number; // 技能吟唱的回合数，0是瞬发
+  energy: number; // 消耗的能量
+  require: string; // 技能释放的额外条件，TODO
 }
 
 // 状态，战斗时会附加在战斗单位上。

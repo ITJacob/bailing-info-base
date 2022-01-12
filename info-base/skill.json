@@ -1,0 +1,15 @@
+{
+  "skill_000_000": {
+    "_id": "skill_000_000",
+    "name": "火球术",
+    "icon": "",
+    "description": "",
+    "value": 1,
+    "groupId": "group_000",
+    "tagIds": ["tag_000"],
+    "power": 2,
+    "chant": 0,
+    "energy": 1,
+    "require": ""
+  }
+}

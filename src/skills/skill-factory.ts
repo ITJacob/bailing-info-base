@@ -3,14 +3,15 @@ import { SkillTemp } from '../interface/ISystem';
 import * as skills from './skills';
 
 interface SkillTempMap {
-  [type: string]: SkillTemp;
+  // 技能的标签
+  [tag: string]: SkillTemp;
 }
 
 class SkillFactory {
-  private types: SkillTempMap;
+  private tags: SkillTempMap;
 
   constructor(_t: SkillTempMap) {
-    this.types = _t;
+    this.tags = _t;
   }
 
   build(info: ISkillInfo) {}

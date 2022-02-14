@@ -1,18 +1,14 @@
 import { ISkillInfo } from '../interface/IInfo';
-import { SkillTemp } from '../interface/ISystem';
+import { ISkillParam, ISkillTag } from '../interface/ISystem';
 import * as skills from './skills';
 
-interface SkillTempMap {
+interface SkillTagMap {
   // 技能的标签
-  [tag: string]: SkillTemp;
+  [tag: string]: new (_info: ISkillInfo, _param: ISkillParam) => ISkillTag;
 }
 
 class SkillFactory {
-  private tags: SkillTempMap;
-
-  constructor(_t: SkillTempMap) {
-    this.tags = _t;
-  }
+  constructor(private tags: SkillTagMap) {}
 
   build(info: ISkillInfo) {}
 }
